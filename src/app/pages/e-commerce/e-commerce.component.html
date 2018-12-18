@@ -1,0 +1,73 @@
+<mat-card class="p-0">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a routerLink="/index">Home</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Coder Queue</li>
+    </ol>
+  </nav>
+</mat-card>
+ 
+<mat-card class="p-0">
+<div class="row">
+  <div class="col-xxl-12">
+    <mat-accordion>    
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Filter</mat-panel-title>
+        </mat-expansion-panel-header>
+        
+       
+        <ngx-to-from-date-selector (valueChange)="valueChange($event)" ></ngx-to-from-date-selector>
+        
+
+        <!-- <div class="col-md-2 d-inline-flex" *ngFor="let matDropdown of matDropdownList">
+          <ngx-mat-dropdown 
+            [placeholder]= matDropdown.placeholder
+            [placeholderLabel]= matDropdown.placeholderLabel 
+            [optionList]="matDropdown.optionList"          
+            [isMultiSelect]=matDropdown.isMultiSelect 
+            [checkOption]=matDropdown.checkOption 
+            [enableSearch]=matDropdown.enableSearch
+            class='full-width'>
+          </ngx-mat-dropdown>
+        </div> -->
+
+        <form class="form-inline col-md-8 float-left">
+          <div class="col-md-2" *ngFor="let matDropdown of matDropdownList">
+            <ngx-mat-dropdown 
+              [placeholder]= matDropdown.placeholder
+              [placeholderLabel]= matDropdown.placeholderLabel 
+              [optionList]="matDropdown.optionList"          
+              [isMultiSelect]=matDropdown.isMultiSelect 
+              [checkOption]=matDropdown.checkOption 
+              [enableSearch]=matDropdown.enableSearch
+              class='full-width'>
+            </ngx-mat-dropdown>
+          </div>
+        </form>
+     
+
+      </mat-expansion-panel>
+    </mat-accordion>      
+  </div>
+</div>
+</mat-card>
+
+<mat-card>
+  <div class="container-fluid">
+    <div class="row">     
+      <div class="col-md-2" *ngFor="let dougnutChart of dougnutChartsLabels">
+        <ngx-solar [cardHeaderName]="dougnutChart.label" [chartValue]="dougnutChart.value"></ngx-solar> 
+      </div>  
+    </div>
+  </div>
+</mat-card>
+
+
+<div class="row">
+  <div class="col-xxl-12">
+    <ngx-ecommerce-visitors-analytics></ngx-ecommerce-visitors-analytics>
+  </div>  
+</div>

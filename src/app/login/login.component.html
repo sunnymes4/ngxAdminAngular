@@ -1,0 +1,32 @@
+
+
+<div class="card">
+  <!-- <img class="pen-title" src="assets/images/Oscar_Logo.png"> -->
+  <h1 class="title">Login</h1>
+  <form [formGroup]="loginFormGroup" autocomplete="off" #formDirective="ngForm">
+    <div class="input-container">
+      <mat-form-field class="mat-form-field-width" >
+        <input matInput formControlName="username" ngModel name="UserName" class="mat-input-form-height" required placeholder="Username" [type]="text">
+        <mat-error>
+          Please enter the username.
+        </mat-error>
+      </mat-form-field>
+    </div>
+  
+    <div class="input-container">
+      <mat-form-field class="mat-form-field-width">
+        <input matInput formControlName="password" ngModel autocomplete="foo" name="Password" class="mat-input-form-height" required placeholder="Password" [type]="hide ?  'text' : 'password' ">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <mat-error>
+          Please enter the password.
+        </mat-error>
+      </mat-form-field>         
+    </div>
+    <div class="container">  
+      <div class="row justify-content-md-center mb-4">
+          <button mat-raised-button  class="col-md-3" [type]="submit" [disabled]="loginFormGroup?.invalid" (click)="login()">Login</button>
+      </div> 
+    </div>
+  </form>
+</div>
+ 

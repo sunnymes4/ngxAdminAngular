@@ -1,0 +1,86 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {
+    MatAutocompleteModule,
+    MatButtonModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule,
+    MatExpansionModule,
+    MatFormFieldModule, MatGridListModule,
+    MatIconModule,
+    MatInputModule, MatListModule, MatMenuModule, MatNativeDateModule, MatProgressBarModule, MatSelectModule,
+    MatSidenavModule,
+    MatSnackBarModule,
+    MatStepperModule,
+    MatTabsModule,
+    MatRippleModule,
+    MatRadioModule,
+    MatTableModule, MatToolbarModule, MatTooltipModule,
+} from '@angular/material';
+// import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+
+
+@NgModule({
+    imports: [
+        CommonModule,
+        MatChipsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatDialogModule,
+        MatButtonModule,
+        MatTabsModule,
+        MatCardModule,
+        MatTableModule,
+        MatIconModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatMenuModule,
+        MatListModule,
+        MatExpansionModule,
+        MatSnackBarModule,
+        MatProgressBarModule,
+        MatCheckboxModule,
+        MatTooltipModule,
+        MatGridListModule,
+        MatStepperModule,
+        MatAutocompleteModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatSelectModule,
+        // NgxMatSelectSearchModule,
+        MatRippleModule,
+        MatRadioModule
+    ],
+    exports: [
+        CommonModule,
+        MatChipsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatDialogModule,
+        MatButtonModule,
+        MatCardModule,
+        MatTableModule,
+        MatIconModule,
+        MatTabsModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatMenuModule,
+        MatListModule,
+        MatExpansionModule,
+        MatSnackBarModule,
+        MatProgressBarModule,
+        MatCheckboxModule,
+        MatTooltipModule,
+        MatGridListModule,
+        MatStepperModule,
+        MatAutocompleteModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatSelectModule,
+        // NgxMatSelectSearchModule,
+        MatRippleModule,
+        MatRadioModule
+    ],
+    declarations: [],
+    
+  
+})
+export class MaterialModule { }
